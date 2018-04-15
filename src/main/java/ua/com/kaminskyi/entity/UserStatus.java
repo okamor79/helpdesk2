@@ -20,5 +20,5 @@ public class UserStatus extends BaseEntity {
     private String statusName;
 
     @OneToMany(mappedBy = "userStatus")
-    private List<Users> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 }

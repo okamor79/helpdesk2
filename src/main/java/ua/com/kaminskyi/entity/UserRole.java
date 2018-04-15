@@ -20,5 +20,5 @@ public class UserRole extends BaseEntity {
     private String roleName;
 
     @OneToMany(mappedBy = "userRole")
-    private List<Users> users = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 }

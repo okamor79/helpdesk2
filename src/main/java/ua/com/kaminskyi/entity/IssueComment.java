@@ -16,7 +16,7 @@ public class IssueComment extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Users users;
+    private User users;
 
     private String commentText;
 

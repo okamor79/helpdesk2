@@ -11,13 +11,15 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @Getter @Setter @NoArgsConstructor
-public class Users extends BaseEntity {
+public class User extends BaseEntity {
 
     private String userName;
 
     private String userPassword;
 
-    private int userProfileID;
+    @OneToOne
+    @JoinColumn(name = "userProfile_id")
+    private UserProfile userProfile;
 
     @ManyToOne
     @JoinColumn(name = "status_id")

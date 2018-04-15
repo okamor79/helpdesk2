@@ -39,7 +39,7 @@ public class Issue extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Users users;
+    private User users;
 
     private LocalDate issueCreated;
 
@@ -49,7 +49,7 @@ public class Issue extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "userA_id")
-    private Users userAssigne;
+    private User userAssigne;
 
     @OneToMany(mappedBy = "issue")
     private List<IssueComment> issueComment = new ArrayList<>();

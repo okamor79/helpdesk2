@@ -21,7 +21,7 @@ public class IssueAttachment extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name ="users_id")
-    private Users users;
+    private User users;
 
     private LocalDateTime created;
 
