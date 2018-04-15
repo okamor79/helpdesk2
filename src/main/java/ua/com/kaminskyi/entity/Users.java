@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,9 +19,13 @@ public class Users extends BaseEntity {
 
     private int userProfileID;
 
-    private int userStatusID;
+    @ManyToOne
+    @JoinColumn(name = "status_id")
+    private UserStatus userStatus;
 
-    private int userRoleID;
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private UserRole userRole;
 
     private int userGroupID;
 
