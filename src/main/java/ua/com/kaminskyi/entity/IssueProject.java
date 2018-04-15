@@ -22,7 +22,7 @@ public class IssueProject extends BaseEntity {
     @Column(name = "prj_desc",columnDefinition = "text")
     private String descProject;
 
-    @Column(name = "prj_code", length = 4)
+    @Column(name = "prj_code", length = 4, unique = true)
     private String codeProject;
 
     @OneToMany(mappedBy = "issueCodeProject")
